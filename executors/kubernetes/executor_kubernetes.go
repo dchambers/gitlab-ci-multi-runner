@@ -128,7 +128,7 @@ func (s *executor) buildContainer(name, image string, limits api.ResourceList, c
 	return api.Container{
 		Name:    name,
 		Image:   image,
-		Command: command,
+		Args:    command,
 		Env:     buildVariables(s.Build.GetAllVariables().PublicOrInternal()),
 		Resources: api.ResourceRequirements{
 			Limits: limits,
